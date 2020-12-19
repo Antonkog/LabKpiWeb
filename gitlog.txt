@@ -1,0 +1,161 @@
+Antons-MacBook-Pro:~ antonkogan$ cd /Users/antonkogan/Desktop/КПИ/4kurs/web/LabKpiWeb
+Antons-MacBook-Pro:LabKpiWeb antonkogan$ git status
+On branch master
+Your branch is up to date with 'LabKpiWeb/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    anton.jpg
+	deleted:    profile.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	img/
+	index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Antons-MacBook-Pro:LabKpiWeb antonkogan$ git add ..
+fatal: ..: '..' is outside repository at '/Users/antonkogan/Desktop/КПИ/4kurs/web/LabKpiWeb'
+Antons-MacBook-Pro:LabKpiWeb antonkogan$ git add .
+Antons-MacBook-Pro:LabKpiWeb antonkogan$ git status
+On branch master
+Your branch is up to date with 'LabKpiWeb/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .DS_Store
+	deleted:    anton.jpg
+	new file:   img/photo.png
+	new file:   index.html
+	deleted:    profile.html
+
+Antons-MacBook-Pro:LabKpiWeb antonkogan$ git commit -m "lab 1 remake"
+[master 519f159] lab 1 remake
+ 5 files changed, 293 insertions(+), 38 deletions(-)
+ create mode 100644 .DS_Store
+ delete mode 100755 anton.jpg
+ create mode 100644 img/photo.png
+ create mode 100644 index.html
+ delete mode 100644 profile.html
+Antons-MacBook-Pro:LabKpiWeb antonkogan$ git status
+On branch master
+Your branch is ahead of 'LabKpiWeb/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	css/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Antons-MacBook-Pro:LabKpiWeb antonkogan$ git status
+On branch master
+Your branch is ahead of 'LabKpiWeb/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	css/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Antons-MacBook-Pro:LabKpiWeb antonkogan$ git diff
+diff --git a/index.html b/index.html
+diff --git a/index.html b/index.html
+index 0d68294..1030081 100644
+--- a/index.html
++++ b/index.html
+@@ -9,8 +9,8 @@
+       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+       rel="stylesheet"
+     />
+-    <!-- <link rel="stylesheet" href="./css/normalize.css" /> -->
+-    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
++    <link rel="stylesheet" href="./css/normalize.css" />^M
++    <link rel="stylesheet" href="./css/styles.css" />^M
+   </head>
+   <body>
+     <div class="container">
+@@ -287,7 +287,6 @@
+         </div>
+       </div>
+     </div>
+-
+     <!-- <script src="./js/main.js"></script> -->
+   </body>
+ </html>
+
+Antons-MacBook-Pro:LabKpiWeb antonkogan$ git add .
+Antons-MacBook-Pro:LabKpiWeb antonkogan$ git status
+On branch master
+Your branch is ahead of 'LabKpiWeb/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   css/normalize.css
+	new file:   css/styles.css
+	modified:   index.html
+
+Antons-MacBook-Pro:LabKpiWeb antonkogan$ git commit -m "lab2"
+[master d4c4cd1] lab2
+ 3 files changed, 449 insertions(+), 3 deletions(-)
+ create mode 100644 css/normalize.css
+ create mode 100644 css/styles.css
+Antons-MacBook-Pro:LabKpiWeb antonkogan$ git push
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (12/12), 34.59 KiB | 8.65 MiB/s, done.
+Total 12 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/Antonkog/LabKpiWeb.git
+   a12ad3d..d4c4cd1  master -> master
+Antons-MacBook-Pro:LabKpiWeb antonkogan$ git status
+On branch master
+Your branch is up to date with 'LabKpiWeb/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .DS_Store
+	modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	js/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Antons-MacBook-Pro:LabKpiWeb antonkogan$ git diff
+diff --git a/.DS_Store b/.DS_Store
+index b7473af..48afb84 100644
+Binary files a/.DS_Store and b/.DS_Store differ
+diff --git a/index.html b/index.html
+index 1030081..e88262e 100644
+--- a/index.html
++++ b/index.html
+@@ -287,6 +287,6 @@
+         </div>
+       </div>
+     </div>
+-    <!-- <script src="./js/main.js"></script> -->
++    <script src="./js/main.js"></script>^M
+   </body>
+ </html>
+Antons-MacBook-Pro:LabKpiWeb antonkogan$ git add .
+Antons-MacBook-Pro:LabKpiWeb antonkogan$ git commit -m "lab3,4"
+[master fc392e6] lab3,4
+ 3 files changed, 16 insertions(+), 1 deletion(-)
+ create mode 100644 js/main.js
+Antons-MacBook-Pro:LabKpiWeb antonkogan$ 
