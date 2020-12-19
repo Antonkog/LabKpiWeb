@@ -1,0 +1,96 @@
+body {
+  font-family: 'Montserrat', 'sans-serif';
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h2 {
+  text-transform: capitalize;
+}
+.bordered {
+  border: 2px solid grey;
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+.d-none {
+  display: none;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  width: 1280px;
+}
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar {
+  flex-basis: 22%;
+}
+.sidebar li {
+  margin: 5px 0;
+}
+.cv-content {
+  flex-basis: 72%;
+}
+.link-item-name_about {
+  margin-right: 1em;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.link-item_about a,
+.link-item-age_about {
+  color: gray;
+}
+.link-item_about {
+  margin-top: 0.5em;
+}
+
+.about .name {
+  padding: 0.5em;
+  display: inline-block;
+  background-color: grey;
+  border-radius: 5px;
+}
+.link-list_references a,
+.link-list_play-market a {
+  color: darkgreen;
+}
+.heading_references,
+.heading_play-market {
+  color: gray;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+.skills-container {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -8px;
+  width: 100%;
+}
+.skill-item {
+  flex: auto;
+  height: auto;
+  min-width: 150px;
+  margin: 0 8px 8px 0;
+}
